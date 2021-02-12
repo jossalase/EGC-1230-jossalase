@@ -25,6 +25,6 @@ notifications:
       - josero.salado@gmail.com
 deploy:
   provider: heroku
-  app: jossalaseegc
+  app: pruebajossalase
   strategy: git
   api_key: $HEROKU_AUTH_TOKEN
