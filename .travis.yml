@@ -1,6 +1,5 @@
 dist: xenial
 
-
 services:
   - postgresql
 addons:
@@ -20,6 +19,10 @@ script:
   - coverage run --branch --source=. ./manage.py test census --keepdb --with-xunit
   - coverage xml
   - python-codacy-coverage -r coverage.xml
+notifications:
+  email:
+    recipients:
+      - josero.salado@gmail.com
 deploy:
   provider: heroku
   app: jossalaseegc
